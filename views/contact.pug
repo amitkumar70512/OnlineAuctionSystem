@@ -1,0 +1,47 @@
+include ./header
+include ./headerBuyer
+
+
+section#Contact
+  .section-info.flex
+    .section-title Contact
+    .section-bar
+  .container
+    .contact.form
+      form(action='/contact', method='post') 
+        .contact-bg
+          .contact-form
+            .contact-details
+              .contact-header
+                .contact-head-middle
+                  h4 Have a Question or Want To Feedback?
+              .contact-body
+                .contact-body-item.left
+                  .app-title
+                    span CONTACT
+                    span US
+                  .app-contact
+                    | CONTACT INFO : +88 01 738 413 487
+                .contact-body-item
+                  .app-form
+                    .app-form-group
+                      input.app-form-control(placeholder='NAME' type='text' name='name')
+                    .app-form-group
+                      input.app-form-control(placeholder='EMAIL' type='email' name='email' required)
+                    .app-form-group
+                      input.app-form-control(placeholder='CONTACT NO' type='text' name='contact')
+                    .app-form-group.message
+                      input.app-form-control(placeholder='MESSAGE' type='textarea' name='message')
+                    .app-form-group.buttons
+                      button.app-form-button(type='cancel') CANCEL
+                      button.app-form-button(type='submit') SEND
+                    .app-form-group.buttons
+
+                  .contact-alerts
+                    if errors
+                      for error, i in errors
+                        div.alert.alert-danger #{error}
+                    if messages
+                      for message in messages
+                        div.alert.alert-info #{message}
+

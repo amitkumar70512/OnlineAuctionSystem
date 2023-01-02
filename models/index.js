@@ -1,0 +1,8 @@
+let users = require('./user.js');
+let items = require('./item.js');
+let bids = require('./bid.js');
+let categories = require('./category.js');
+let sessions = require('./session.js');
+let admin = require('./admin.js');
+
+module.exports = { items, users, bids, categories, sessions, admin };
